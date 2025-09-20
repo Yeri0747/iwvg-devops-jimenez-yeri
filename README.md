@@ -6,6 +6,8 @@
 ### Estado del código
 [![CI](https://github.com/Yeri0747/iwvg-devops-jimenez-yeri/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/Yeri0747/iwvg-devops-jimenez-yeri/actions/workflows/continuous-integration.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yeri0747_iwvg-devops-jimenez-yeri&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=yeri0747_iwvg-devops-jimenez-yeri)
+[![Render broken](https://iwvg-devops-jimenez-yeri-latest.onrender.com/version-badge)](https://iwvg-devops-latest.onrender.com/swagger-ui.html)
+
 
 ### Tecnologías necesarias
 `Java` `Maven` `GitHub` `GitHub Actions` `Sonarcloud` `Slack` `Spring-Boot` `GitHub Packages` `Docker` `OpenAPI`
