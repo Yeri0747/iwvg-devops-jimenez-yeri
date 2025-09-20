@@ -5,7 +5,7 @@
 
 ### Estado del código
 [![CI](https://github.com/Yeri0747/iwvg-devops-jimenez-yeri/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/Yeri0747/iwvg-devops-jimenez-yeri/actions/workflows/continuous-integration.yml)
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=yeri0747_iwvg-devops-jimenez-yeri)](https://sonarcloud.io/summary/new_code?id=yeri0747_iwvg-devops-jimenez-yeri)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yeri0747_iwvg-devops-jimenez-yeri&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=yeri0747_iwvg-devops-jimenez-yeri)
 
 ### Tecnologías necesarias
 `Java` `Maven` `GitHub` `GitHub Actions` `Sonarcloud` `Slack` `Spring-Boot` `GitHub Packages` `Docker` `OpenAPI`
