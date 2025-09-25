@@ -3,6 +3,7 @@ package es.upm.miw.devops.code;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -76,5 +77,23 @@ class SearchesTest {
         Fraction result = searches.findFractionSubtractionByUserName("NoExiste");
 
         assertThat(result).isNull();
+    }
+
+    @Test
+    void testFindUserFamilyNameBySomeImproperFractionReturnsExpected() {
+        Searches searches = new Searches();
+
+        List<String> result = searches.findUserFamilyNameBySomeImproperFraction()
+                .collect(Collectors.toList());
+
+        List<String> expected = List.of(
+                "Fernandez",
+                "Blanco",
+                "López",
+                "Torres",
+                "Torres"
+        );
+
+        assertThat(result).containsExactlyElementsOf(expected);
     }
 }

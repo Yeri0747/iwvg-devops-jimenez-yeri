@@ -1,5 +1,7 @@
 package es.upm.miw.devops.code;
 
+import java.util.stream.Stream;
+
 public class Searches {
 
     public Fraction findHighestFraction() {
@@ -20,6 +22,14 @@ public class Searches {
                     return f1.add(negativeF2);
                 })
                 .orElse(null);
+    }
+
+    public Stream<String> findUserFamilyNameBySomeImproperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(f -> f != null && f.getDenominator() != 0 && f.isImproper())
+                )
+                .map(User::getFamilyName);
     }
 
 }

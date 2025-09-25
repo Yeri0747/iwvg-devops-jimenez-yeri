@@ -58,11 +58,11 @@ public class Fraction {
     }
 
     public boolean isProper() {
-        return numerator < denominator;
+        return Math.abs(numerator) < Math.abs(denominator);
     }
 
     public boolean isImproper() {
-        return numerator >= denominator;
+        return Math.abs(numerator) >= Math.abs(denominator);
     }
 
     public boolean isEquivalent(Fraction other) {
