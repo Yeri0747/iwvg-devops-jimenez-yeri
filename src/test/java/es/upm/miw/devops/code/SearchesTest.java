@@ -96,4 +96,37 @@ class SearchesTest {
 
         assertThat(result).containsExactlyElementsOf(expected);
     }
+
+    @Test
+    void testFindFractionMultiplicationByUserFamilyNameWithValidFractions() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionMultiplicationByUserFamilyName("Blanco");
+
+        assertThat(result).isNotNull();
+
+        assertThat(result.getNumerator()).isZero();
+        assertThat(result.getDenominator()).isEqualTo(-360);
+    }
+
+    @Test
+    void testFindFractionMultiplicationByUserFamilyNameWithInvalidFractions() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionMultiplicationByUserFamilyName("Torres");
+
+        assertThat(result).isNotNull();
+
+        assertThat(result.getNumerator()).isEqualTo(8);
+        assertThat(result.getDenominator()).isEqualTo(8);
+    }
+
+    @Test
+    void testFindFractionMultiplicationByUserFamilyNameNonExistent() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionMultiplicationByUserFamilyName("NoExiste");
+
+        assertThat(result).isNull();
+    }
 }
