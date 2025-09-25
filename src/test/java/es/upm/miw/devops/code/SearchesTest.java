@@ -37,4 +37,44 @@ class SearchesTest {
         assertThat(result.getNumerator()).isEqualTo(2);
         assertThat(result.getDenominator()).isEqualTo(1);
     }
+
+    @Test
+    void testFindFractionSubtractionByUserNameWithMultipleFractions() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionSubtractionByUserName("Oscar");
+
+        assertThat(result).isNotNull();
+        assertThat(result.getNumerator()).isEqualTo(1008);
+        assertThat(result.getDenominator()).isEqualTo(-240);
+    }
+
+    @Test
+    void testFindFractionSubtractionByUserNameWithNegativeFractions() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionSubtractionByUserName("Ana");
+
+        assertThat(result.getNumerator()).isEqualTo(22);
+        assertThat(result.getDenominator()).isEqualTo(60);
+    }
+
+    @Test
+    void testFindFractionSubtractionByUserNameWithNoValidFractions() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionSubtractionByUserName("Paula");
+
+        assertThat(result.getNumerator()).isEqualTo(-8);
+        assertThat(result.getDenominator()).isEqualTo(8);
+    }
+
+    @Test
+    void testFindFractionSubtractionByUserNameNonExistentUser() {
+        Searches searches = new Searches();
+
+        Fraction result = searches.findFractionSubtractionByUserName("NoExiste");
+
+        assertThat(result).isNull();
+    }
 }
